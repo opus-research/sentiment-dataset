@@ -18,7 +18,7 @@ Dataset Schema:
             "avg_confidence": 4.333333333333333,
             "agreement_type": "neuro_and_comp"
         },
-        "discussion_polarity: "neutral", // OPTIONAL FIELD: Only exists if this was a case of total disagreement between evaluators. This field contains the polarity decided after they discussed the message.
+        "discussion_polarity": "neutral", // OPTIONAL FIELD: Only exists if this was a case of total disagreement between evaluators. This field contains the polarity decided after they discussed the message.
         "individual_answers": [ // An array containing the individual response from each evaluator.
             {
                 "part1": {

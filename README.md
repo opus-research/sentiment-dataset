@@ -7,7 +7,7 @@ Dataset Schema:
 ```json
 [
     {
-        "raw_message": "@snicoll did you get a chance to follow up on the issue? If not, I can take a look in the next 24hrs.",
+        "raw_message": "did you get a chance to follow up on the issue? If not, I can take a look in the next 24hrs.",
         "part1_aggregate": {
             "polarity": "undefined",
             "avg_confidence": 3.3333333333333335,

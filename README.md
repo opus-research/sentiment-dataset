@@ -1,4 +1,4 @@
-# Replication package for "PRemo: A Dataset of Emotions \\on Pull Request Discussions"
+# Replication package for "PRemo: A Dataset of Emotions on Pull Request Discussions"
 
 The file [dataset.json](dataset.json) contains the dataset described in the paper.
 

@@ -88,3 +88,7 @@ The file [dataset.json](dataset.json) contains the dataset described in the pape
 |                             | astropy/astropy                 | Library                        | 2011       | 13 years | 382k          | 10300            | 485             |
 |                             | pallets/flask                   | Python Framework               | 2010       | 14 years | 17k           | 2524             | 715             |
 |                             | ansible/ansible                 | Framework                      | 2012       | 12 years | 245k          | 50519            | 5000+           |
+
+# Tool developed for the labeling 
+
+The tool that was utilized to perform the labeling process is available as part of the replication package of the first study that was executed using the dataset, which is available at [https://github.com/opus-research/sentiment-replication](https://github.com/opus-research/sentiment-replication).

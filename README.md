@@ -54,4 +54,4 @@ A Jupyter notebook, containing example code that can be used to analyze the data
 
 # Tool developed for the labeling 
 
-The web-based tool that was utilized to perform the labeling process is available as part of the replication package of the first study that was executed using the dataset, which is ommitted for blind review. The link will be provided after the paper is accepted.
+The web-based tool that was utilized to perform the labeling process is available as part of the replication package of the first study that was executed using the dataset, which is available at [sentiment-replication](https://github.com/opus-research/sentiment-replication).

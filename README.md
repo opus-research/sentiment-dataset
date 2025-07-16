@@ -2,8 +2,6 @@
 
 This repository contains the complete PRemo dataset, analysis tools, validation web application, and research findings.
 
-{ADD DOI}
-
 Access the full paper [here](results/PRemo.pdf)
 
 ## Abstract
@@ -14,10 +12,16 @@ We introduce PRemo, a dataset of approximately 1,8k pull‑request messages from
 
 - [scripts](scripts): A Jupyter notebook, containing example code that can be used to analyze the dataset (including the data used in the paper) and a `requirements.txt` file that lists what is required to reproduce the project environment.
 - [results](results): Analysis outputs including emotion frequency counts, sentiment polarity distributions, inter-rater agreement statistics, and comprehensive summary reports. Also includes the full paper in pdf version.
-- [tool](tool): All scripts and requirements to replicate the web-based tool utilized to perform and collect the human labelling process.
 - [data](data): [dataset.json](data/dataset.json) with the complete dataset collected by the tool and detailed below.
+    - The [data/labeling/](data/labeling/) subfolder contains the data that was used for the labeling process. Files are compressed (using 7-zip) due to file size constraints. It contains 4 files:
+        - [data/labeling/all_comments.7z](data/labeling/all_comments.7z): json file with all of the comments that were mined before the sampling process.
+        - [data/labeling/all_comments_with_sentiment.7z](data/labeling/all_comments_with_sentiment.7z): same file as above, but contains sentiment labels generated using SentiStrengthSE
+        - [data/labeling/all_messages_ssse.7z](data/labeling/all_messages_ssse.7z): txt file containing all messages formatted in the way that SentiStrengthSE expects
+        - [data/labeling/ssse_output.7z](data/labeling/ssse_output.7z): raw output of SentiStrengthSE containing the sentiment labels.
+- [tool](tool): All scripts and requirements to replicate the web-based tool utilized to perform and collect the human labelling process.
+- [screenshots](screenshots): Contain two screenshots that show how the pages in the labeling tool are structured.
 
-- #### Dataset Schema for [dataset.json](data/dataset.json):
+## Dataset Schema for [dataset.json](data/dataset.json):
 
 ```json
 [
@@ -63,33 +67,58 @@ We introduce PRemo, a dataset of approximately 1,8k pull‑request messages from
 ...]
 ```
 
-## Reproducing the Study
+## Requirements
 
-- Tool
+- Python 3 (tested using version 3.11)
 
-{ADD - tool part}
+## Reproducing the Analyses from the paper
 
-- Analysis of the data gathered by the tool.
+1. Install dependencies using `pip install -r scripts/requirements.txt`
 
-    - 1. Install dependencies
+2. Run the analysis script on your terminal: `jupyter scripts/analysis.ipynb`
+    -  You will also be able to execute it using any IDE capable of reading jupyter notebooks, such as VSCode, PyCharm, etc.
+    -  If you want to avoid having to setup a local environment, we recommend running the notebook using Google Colab.
 
-    ```bash
-   pip install -r scripts/requirements.txt
-   ```
+## Reproducing the Labeling Process
 
-    - 2. Run the analysis script on your terminal - :
+> [!CAUTION]
+> To execute the labeling process, we created a tool called validatool. Since it was purpose built for this study, it was not build with extensibility in mind.
+> You may also encounter bugs when trying to reproduce the study in different conditions (e.g., different number of participants) than that of our original study.
+> The study was also manually monitored to make sure that the algorithm was allocating evaluators correctly for each message, and some manual changes had to be made to make sure the study protocol was being correctly followed, so your mileage may vary.
 
-        - `python scripts/analysis.ipynb`
+1. Navigate to the tool root folder: `cd ./tool/validatool`
+
+2. Optional: We recommend that you create a virtual environment before proceeding: `python -m venv ./.venv/`. 
+    - Activate by running the activate script created at `./.venv/Scripts`
+    - The command to run the script may vary depending on your operating system and terminal:
+        - Windows (cmd): `.venv\Scripts\activate.bat`
+        - Linux/MacOs: `source ./venv/Scripts/activate`
+
+3. Install dependencies: `pip install -r requirements.txt`
+
+4. Create the database: `python manage.py migrate`
+
+5. Create an admin user: `python manage.py createsuperuser`
+
+6. Run the development server: `python manage.py runserver`
+    - The tool will now be accessible to use via `http://localhost:8000`
+    - However, we still need to setup the experiment data.
+
+7.  Access the admin panel via `http://localhost:8000/admin/`
+    - Create two groups with the default permissions: Neuro and Comp
+    - Create the users that will participate in the validation. Set them in their correct groups after creation `Neuro` for neuroscientists and `Comp` for Software Engineers. The validation algorithm will not work without both types of users being present.
+    - Go to the validation panel and create a new one. Use any title you want, add a guiding text (a text for training evaluators.)
+        - The guiding text we utilized is located at [tool\validatool\guiding_text.md](tool\validatool\guiding_text.md).
+    - For all evaluators create participation items in the database. Set the user and the validation and keep the item blank (there should be no items in the database for now).
+
+8. Generate a random sample of messages to be added to the database.
+    - First, unzip (using 7-zip) the [tool\validatool\scripts\data\all_comments_with_sentiment.7z](tool\validatool\scripts\data\all_comments_with_sentiment.7z) file. Do not create a subfolder when extracting the file.
+    - After that, use the command `python manage.py runscript include_items_in_sentiment_validation` to create a random sample and include it in the database.
+        - To tweak the ratio of messages (in terms of sentiment polarity assigned by SentiStrengthSE), manually change the values in the script.
+
+9. Now, the users can just login in `http://localhost:8000` and participate in the validation.
 
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).  
 Feel free to use, modify, and distribute it as permitted under the terms of this license.
-
-## Citation
-
-If you use this repository or its data:
-
-``` bibtex
-
-```

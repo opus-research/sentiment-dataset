@@ -12,10 +12,10 @@ Access the full paper [here](results/PRemo.pdf)
 
 ## Repository Structure
 
-- /data: Contains 2 JSONs: [dataset.json](data/dataset.json) with _____ data.
-- /scripts: Includes all scripts used for data analysis, comparison and visualization and a `requirements.txt` file that lists the libraries required to reproduce the project environment.
-- /results: {ADD}. Also includes the full paper in pdf version.
-- /tool: All scripts and requirements to replicate the web-based tool utilized to perform and collect the human labelling process.
+- [/data](data): Contains 2 JSONs: [dataset.json](data/dataset.json) with _____ data.
+- [/scripts](scripts): Includes all scripts used for data analysis, comparison and visualization and a `requirements.txt` file that lists the libraries required to reproduce the project environment.
+- [/results](results): {ADD}. Also includes the full paper in pdf version.
+- [/tool](tool): All scripts and requirements to replicate the web-based tool utilized to perform and collect the human labelling process.
 
 - ### Dataset Schema for [dataset.json](data/dataset.json):
 

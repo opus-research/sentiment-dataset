@@ -12,10 +12,10 @@ Access the full paper [here](results/PRemo.pdf)
 
 ## Repository Structure
 
-- [/data](data): Contains 2 JSONs: [dataset.json](data/dataset.json) with _____ data.
-- [/scripts](scripts): Includes all scripts used for data analysis, comparison and visualization and a `requirements.txt` file that lists the libraries required to reproduce the project environment.
-- [/results](results): {ADD}. Also includes the full paper in pdf version.
-- [/tool](tool): All scripts and requirements to replicate the web-based tool utilized to perform and collect the human labelling process.
+- [scripts](scripts): Includes all scripts used for data analysis and visualization and a `requirements.txt` file that lists the libraries required to reproduce the project environment.
+- [results](results): {ADD}. Also includes the full paper in pdf version.
+- [tool](tool): All scripts and requirements to replicate the web-based tool utilized to perform and collect the human labelling process.
+- [data](data): [dataset.json](data/dataset.json) with the complete dataset collected by the tool and detailed below.
 
 - #### Dataset Schema for [dataset.json](data/dataset.json):
 
@@ -63,14 +63,13 @@ Access the full paper [here](results/PRemo.pdf)
 ...]
 ```
 
-### Dataset Schema for [dataset_tools.json](data/dataset_tools.json):
+## Reproducing the Study
 
-
-## Reproducing Human Labelling
+- Tool
 
 {ADD - tool part}
 
-## Reproducing Analysis and Comparison between tools and human labelling
+- Analysis of the data gathered by the tool.
 
 A Jupyter notebook, containing example code that can be used to analyze the dataset (including the data used in the paper), is available at [analysis.ipynb](analysis.ipynb).
 

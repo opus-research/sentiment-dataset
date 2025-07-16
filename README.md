@@ -122,3 +122,7 @@ We introduce PRemo, a dataset of approximately 1,8k pull‑request messages from
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).  
 Feel free to use, modify, and distribute it as permitted under the terms of this license.
+
+## Papers that have utilized PRemo
+
+- Coutinho, D., Cito, L., Lima, M.V., Arantes, B., Alves Pereira, J., Arriel, J., Godinho, J., Martins, V., Libório, P.V.C., Leite, L. and Garcia, A., 2024, June. " Looks Good To Me;-)": Assessing Sentiment Analysis Tools for Pull Request Discussions. In Proceedings of the 28th International Conference on Evaluation and Assessment in Software Engineering (pp. 211-221).

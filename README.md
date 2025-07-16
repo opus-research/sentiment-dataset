@@ -8,12 +8,12 @@ Access the full paper [here](results/PRemo.pdf)
 
 ## Abstract
 
-We introduce PRemo, a dataset of approximately 1.8 K pull‑request messages from 36 open‑source projects, each annotated for discrete emotions, intensity levels and evaluator confidence via a two‑pass labelling process with and without context. Software engineers and neuroscientists conducted triple validation to ensure annotation reliability, and we report inter‑rater agreement metrics to demonstrate consistency. PRemo is publicly released to support fine‑grained emotion analysis in software engineering.
+We introduce PRemo, a dataset of approximately 1,8k pull‑request messages from 36 open‑source projects, each annotated for discrete emotions, intensity levels and evaluator confidence via a two‑pass labelling process with and without context. Software engineers and neuroscientists conducted triple validation to ensure annotation reliability, and we report inter‑rater agreement metrics to demonstrate consistency. PRemo is publicly released to support fine‑grained emotion analysis in software engineering.
 
 ## Repository Structure
 
 - [scripts](scripts): A Jupyter notebook, containing example code that can be used to analyze the dataset (including the data used in the paper) and a `requirements.txt` file that lists what is required to reproduce the project environment.
-- [results](results): {ADD}. Also includes the full paper in pdf version.
+- [results](results): Analysis outputs including emotion frequency counts, sentiment polarity distributions, inter-rater agreement statistics, and comprehensive summary reports. Also includes the full paper in pdf version.
 - [tool](tool): All scripts and requirements to replicate the web-based tool utilized to perform and collect the human labelling process.
 - [data](data): [dataset.json](data/dataset.json) with the complete dataset collected by the tool and detailed below.
 

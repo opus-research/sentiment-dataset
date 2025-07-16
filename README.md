@@ -1,8 +1,23 @@
-# Replication package for "PRemo: A Dataset of Emotions Found on Pull Request Discussions"
+# PRemo: A Dataset of Emotions Found on Pull Request Discussions
 
-The file [dataset.json](dataset.json) contains the dataset described in the paper.
+This repository contains {ADD}
 
-## Dataset Schema:
+{ADD DOI}
+
+Access the full paper [here](results/PRemo.pdf)
+
+## Abstract
+
+{ADD}
+
+## Repository Structure
+
+- /data: Contains 2 JSONs: [dataset.json](data/dataset.json) with _____ data and [dataset_tools.json](data/dataset_tools.json) with _____ data.
+- /scripts: Includes all scripts used for data analysis, comparison and visualization and a `requirements.txt` file that lists the libraries required to reproduce the project environment.
+- /results: {ADD}. Also includes the full paper in pdf version.
+- /tool: All scripts and requirements to replicate the web-based tool utilized to perform and collect the human labelling process.
+
+### Dataset Schema for [dataset.json](data/dataset.json):
 
 ```json
 [
@@ -10,12 +25,12 @@ The file [dataset.json](dataset.json) contains the dataset described in the pape
         "project": "spring-boot",
         "message_url": "https://github.com/spring-projects/spring-boot/pull/21658#issuecomment-660726475",
         "raw_message": "did you get a chance to follow up on the issue? If not, I can take a look in the next 24hrs.",
-        "part1_aggregate": { // Data for the first pass of our manual labeling, where the evaluators only had the text of the message.
+        "part1_aggregate": { // Data for the first pass of our manual labelling, where the evaluators only had the text of the message.
             "polarity": "undefined",
             "avg_confidence": 3.3333333333333335,
             "agreement_type": "undefined"
         },
-        "part2_aggregate": {  // Data for the second pass of our manual labeling, where the evaluators has access to the github link for the message, that includes more contextual information.
+        "part2_aggregate": {  // Data for the second pass of our manual labelling, where the evaluators has access to the github link for the message, that includes more contextual information.
             "polarity": "neutral",
             "avg_confidence": 4.333333333333333,
             "agreement_type": "neuro_and_comp"
@@ -48,10 +63,26 @@ The file [dataset.json](dataset.json) contains the dataset described in the pape
 ...]
 ```
 
-# Scripts
+### Dataset Schema for [dataset_tools.json](data/dataset_tools.json):
+
+
+## Reproducing Human Labelling
+
+{ADD - tool part}
+
+## Reproducing Analysis and Comparison between tools and human labelling
 
 A Jupyter notebook, containing example code that can be used to analyze the dataset (including the data used in the paper), is available at [analysis.ipynb](analysis.ipynb).
 
-# Tool developed for the labeling 
+## License
 
-The web-based tool that was utilized to perform the labeling process is available as part of the replication package of the first study that was executed using the dataset, which is available at [sentiment-replication](https://github.com/opus-research/sentiment-replication).
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).  
+Feel free to use, modify, and distribute it as permitted under the terms of this license.
+
+## Citation
+
+If you use this repository or its data:
+
+``` bibtex
+
+```

@@ -1,6 +1,6 @@
 # PRemo: A Dataset of Emotions Found on Pull Request Discussions
 
-This repository contains {ADD}
+This repository contains the complete PRemo dataset, analysis tools, validation web application, and research findings.
 
 {ADD DOI}
 

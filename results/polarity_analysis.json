@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "total_messages": 1791,
+    "positive_count": 521,
+    "neutral_count": 838,
+    "negative_count": 432,
+    "positive_percentage": 29.09,
+    "neutral_percentage": 46.79,
+    "negative_percentage": 24.12
+  },
+  "details": {
+    "positive_messages": 521,
+    "neutral_messages": 838,
+    "negative_messages": 432
+  }
+}

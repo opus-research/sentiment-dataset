@@ -1,0 +1,29 @@
+SENTIMENT DATASET ANALYSIS SUMMARY
+____________________________________
+
+DATASET OVERVIEW
+--------------------
+Total Messages: 1791
+Unique Emotions: 7
+Total Emotion Instances: 4073
+
+POLARITY DISTRIBUTION
+--------------------
+Positive: 521 (29.09%)
+Neutral: 838 (46.79%)
+Negative: 432 (24.12%)
+
+AGREEMENT ANALYSIS
+--------------------
+Part 1 Total Agreement: 1070 (59.74%)
+Part 2 Total Agreement: 1042 (58.18%)
+
+EMOTIONS RANK
+--------------------
+joy: 1770
+sadness: 1121
+anger: 461
+negativesurprise: 307
+fear: 181
+love: 153
+positivesurprise: 80

@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "total_messages": 1791,
+    "part1_agreement": {
+      "total_agreement": 1070,
+      "partial_agreement": 680,
+      "no_agreement": 41,
+      "total_agreement_percentage": 59.74,
+      "partial_agreement_percentage": 37.97,
+      "no_agreement_percentage": 2.29
+    },
+    "part2_agreement": {
+      "total_agreement": 1042,
+      "partial_agreement": 700,
+      "no_agreement": 49,
+      "total_agreement_percentage": 58.18,
+      "partial_agreement_percentage": 39.08,
+      "no_agreement_percentage": 2.74
+    }
+  },
+  "raw_counts": {
+    "part1": {
+      "total": 1070,
+      "partial": 680,
+      "none": 41
+    },
+    "part2": {
+      "total": 1042,
+      "partial": 700,
+      "none": 49
+    }
+  }
+}

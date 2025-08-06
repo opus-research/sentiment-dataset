@@ -107,6 +107,7 @@ We introduce PRemo, a dataset of approximately 1,8k pull‑request messages from
     - However, we still need to setup the experiment data.
 
 7.  Access the admin panel via `http://localhost:8000/admin/`
+    - Login with the user created on step 5.
     - Create two groups with the default permissions: Neuro and Comp
     - Create the users that will participate in the validation. Set them in their correct groups after creation `Neuro` for neuroscientists and `Comp` for Software Engineers. The validation algorithm will not work without both types of users being present.
     - Go to the validation panel and create a new one. Use any title you want, add a guiding text (a text for training evaluators.)
@@ -118,7 +119,8 @@ We introduce PRemo, a dataset of approximately 1,8k pull‑request messages from
     - After that, use the command `python manage.py runscript include_items_in_sentiment_validation` to create a random sample and include it in the database.
         - To tweak the ratio of messages (in terms of sentiment polarity assigned by SentiStrengthSE), manually change the values in the script.
 
-9. Now, the users can just login in `http://localhost:8000` and participate in the validation.
+9. Now, the users can just login in `http://localhost:8000` and participate in the validation. 
+    - To login, you can either use the admin user created on step 5 or any of the users you have created for the participants in step 7.
 
 ## License
 

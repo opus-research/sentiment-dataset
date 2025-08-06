@@ -1,6 +1,6 @@
 # PRemo: A Dataset of Emotions Found on Pull Request Discussions
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15810811.svg)](https://doi.org/10.5281/zenodo.15810811)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15810713.svg)](https://doi.org/10.5281/zenodo.15810713)
 
 This repository contains the complete PRemo dataset, analysis tools, validation web application, and research findings.
 
